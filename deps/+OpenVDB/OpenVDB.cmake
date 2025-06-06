@@ -15,13 +15,13 @@ endif ()
 
 add_cmake_project(OpenVDB
     # 8.2 patched
-    URL https://github.com/prusa3d/openvdb/archive/a68fd58d0e2b85f01adeb8b13d7555183ab10aa5.zip
-    URL_HASH SHA256=f353e7b99bd0cbfc27ac9082de51acf32a8bc0b3e21ff9661ecca6f205ec1d81
+    URL https://github.com/AcademySoftwareFoundation/openvdb/archive/refs/tags/v12.0.1.zip
+    URL_HASH SHA256=d5dc08561932237addc373a9171619055fa53cee80522fc741cfdd248e0ec0c5
     CMAKE_ARGS
-        -DCMAKE_POSITION_INDEPENDENT_CODE=ON 
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON
         -DOPENVDB_BUILD_PYTHON_MODULE=OFF
         -DUSE_BLOSC=ON
-        -DOPENVDB_CORE_SHARED=${_build_shared} 
+        -DOPENVDB_CORE_SHARED=${_build_shared}
         -DOPENVDB_CORE_STATIC=${_build_static}
         -DOPENVDB_ENABLE_RPATH:BOOL=OFF
         -DTBB_STATIC=${_build_static}
